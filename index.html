@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="silhouette.png">
+  <title>คำนวณเงิน</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="apple.png" alt="Logo" class="logo">
+    <h1>ระบบคำนวณเงิน</h1>
+  </header>
+
+  <main>
+    <form id="moneyForm">
+      <h2>กรอกจำนวนธนบัตรและเหรียญ</h2>
+      <div class="form-group">
+        <label>แบงค์ 1000:</label>
+        <input type="number" min="0" id="b1000">
+      </div>
+      <div class="form-group">
+        <label>แบงค์ 500:</label>
+        <input type="number" min="0" id="b500">
+      </div>
+      <div class="form-group">
+        <label>แบงค์ 100:</label>
+        <input type="number" min="0" id="b100">
+      </div>
+      <div class="form-group">
+        <label>แบงค์ 50:</label>
+        <input type="number" min="0" id="b50">
+      </div>
+      <div class="form-group">
+        <label>แบงค์ 20:</label>
+        <input type="number" min="0" id="b20">
+      </div>
+      <div class="form-group">
+        <label>เหรียญ 10:</label>
+        <input type="number" min="0" id="c10">
+      </div>
+      <div class="form-group">
+        <label>เหรียญ 5:</label>
+        <input type="number" min="0" id="c5">
+      </div>
+      <div class="form-group">
+        <label>เหรียญ 2:</label>
+        <input type="number" min="0" id="c2">
+      </div>
+      <div class="form-group">
+        <label>เหรียญ 1:</label>
+        <input type="number" min="0" id="c1">
+      </div>
+      <div class="form-group">
+        <label>เหรียญ 50 สตางค์:</label>
+        <input type="number" min="0" id="c050">
+      </div>
+      <div class="form-group">
+        <label>เหรียญ 25 สตางค์:</label>
+        <input type="number" min="0" id="c025">
+      </div>
+
+      <div class="buttons">
+        <button type="button" id="calcEach">คำนวณแยก</button>
+        <button type="button" id="calcAll">คำนวณรวม</button>
+        <button type="reset">รีเซ็ต</button>
+        <div class="nav">
+          <a href="history.html">ไปหน้าประวัติ</a>
+        </div>
+      </div>
+    </form>
+    
+    <div id="result"></div>
+
+    <!-- เรียงลำดับไฟล์ให้ popup.js โหลดก่อน -->
+    <script defer src="popup.js"></script>
+    <script defer src="script.js"></script>
+  </main>
+</body>
+</html>

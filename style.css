@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Niramit:wght@400;500;600&display=swap');
+
+/* =================== พื้นฐาน =================== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Niramit", sans-serif;
+  background: #f7f7f7;
+}
+
+header {
+  text-align: center;
+  padding: 10px 0;
+  background: #4caf50;
+  color: white;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 80px); /* ลบ header สูงประมาณ 80px */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+form {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.form-group input {
+  flex: 0 0 120px;
+  padding: 5px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+button, a {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover, a:hover {
+  background: #45a049;
+}
+
+#result {
+  margin-top: 20px;
+  background: #eaf4ea;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  background: #4caf50;
+  color: white;
+}
+
+/* =================== ประวัติ =================== */
+#historyTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: 300px;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-x: auto;
+  background: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#historyTable table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#historyTable th, #historyTable td {
+  border: 1px solid #4caf50;
+  padding: 8px;
+  text-align: center;
+}
+
+#historyTable th {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* =================== Responsive (มือถือ) =================== */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  form {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    margin-bottom: 5px;
+  }
+
+  .form-group input {
+    width: 100%;
+    flex: 1 1 auto;
+    padding: 8px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button, a {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+
+  th, td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #historyTable {
+    width: 100%;
+    min-height: 250px;
+    padding: 15px;
+  }
+}
